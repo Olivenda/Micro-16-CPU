@@ -1,0 +1,13 @@
+MOVI R1, 20
+MOVI R2, 1
+MOVI R3, 0
+
+Loop:
+CMP R1,R3
+JEQ done
+SUB R1,R2
+MOV R0,R1
+JMP Loop
+
+done:
+hlt
