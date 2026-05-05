@@ -1,5 +1,5 @@
 ; =============================================================================
-; CPU-16 BIOS - Minimal boot, well under 512 bytes
+; Micro-16 BIOS - Minimal boot
 ;
 ; Memory layout:
 ;   0x0000 - 0x01FF  ROM (this BIOS)
