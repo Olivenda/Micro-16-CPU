@@ -1,0 +1,7 @@
+*.hex
+*.asm
+snake.c
+main.c 
+test_lib.c
+simulation/*
+src/*
