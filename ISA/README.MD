@@ -29,23 +29,23 @@ interface) over real pins.
 
 ```
 cpu16_fpga/
-âââ rtl/                    synthesisable RTL
-â   âââ cpu16_core.v        ISA implementation (FSM, regfile, ALU, decoder)
-â   âââ eeprom_fetch.v      parallel-EEPROM read controller
-â   âââ dmem.v              on-chip BRAM data memory
-â   âââ io_block.v          memory-mapped LEDs / switches / UART TX
-â   âââ cpu16_top.v         top wrapper, address decoder, reset sync
-âââ sim/                    simulation
-â   âââ eeprom_model.v      behavioural EEPROM (loads from prog.hex)
-â   âââ cpu16_tb.v          smoke-test testbench
-â   âââ prog.hex            tiny hand-written program (LEDs blink AA/55)
-âââ tools/
-â   âââ asm2eeprom.py       converts `masm` output -> byte image + raw .bin
-âââ examples/
-â   âââ led_blink.asm       slightly bigger demo using ALU, CMP, JLT, OR
-âââ constraints/
-    âââ cpu16.sdc           Quartus timing constraints
-    âââ cpu16_pins.qsf      Cyclone 10 LP pin template (rename pins!)
+rtl/                    synthesisable RTL
+cpu16_core.v        ISA implementation (FSM, regfile, ALU, decoder)
+eeprom_fetch.v      parallel-EEPROM read controller
+dmem.v              on-chip BRAM data memory
+io_block.v          memory-mapped LEDs / switches / UART TX
+cpu16_top.v         top wrapper, address decoder, reset sync
+sim/                    simulation
+eeprom_model.v      behavioural EEPROM (loads from prog.hex)
+cpu16_tb.v          smoke-test testbench
+prog.hex            tiny hand-written program (LEDs blink AA/55)
+tools/
+asm2eeprom.py       converts `masm` output -> byte image + raw .bin
+examples/
+led_blink.asm       slightly bigger demo using ALU, CMP, JLT, OR
+constraints/
+cpu16.sdc           Quartus timing constraints
+cpu16_pins.qsf      Cyclone 10 LP pin template (rename pins!)
 ```
 
 ## Memory map (CPU view)
